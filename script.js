@@ -25,7 +25,7 @@ function generateRandomEndpoint() {
         const prefixes = [
 			"162.159.192.",
 			"162.159.195.",
-			"engage.cloudflareclient.com",
+			"188.114.99.",
 			"8.6.112.",
 			"8.34.70.",
 			"8.34.146.",
@@ -43,7 +43,7 @@ function generateRandomEndpoint() {
         if (prefix === "engage.cloudflareclient.com") {
             return `${prefix}:${port}`;
         } else {
-            const randomNumber = Math.floor(Math.random() * 10) + 1;
+            const randomNumber = Math.floor(Math.random() * 255) + 1;
             return `${prefix}${randomNumber}:${port}`;
         }
     }
