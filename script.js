@@ -6,6 +6,38 @@ const WireSock = document.getElementById('generateButton5');
 const ClashMASQUE = document.getElementById('generateButton6');
 const container = document.querySelector('.container');
 
+document.addEventListener('DOMContentLoaded', () => {
+  const themeCheckbox = document.getElementById('themeCheckbox');
+  const themeLabel = document.getElementById('themeLabel');
+
+  // Проверка сохраненной темы
+  const savedTheme = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+    document.body.classList.add('dark-theme');
+    themeCheckbox.checked = true;
+    themeLabel.textContent = '🌙';
+  } else {
+    document.body.classList.remove('dark-theme');
+    themeCheckbox.checked = false;
+    themeLabel.textContent = '☀️';
+  }
+
+  // Обработчик переключения
+  themeCheckbox.addEventListener('change', () => {
+    if (themeCheckbox.checked) {
+      document.body.classList.add('dark-theme');
+      localStorage.setItem('theme', 'dark');
+      themeLabel.textContent = '🌙';
+    } else {
+      document.body.classList.remove('dark-theme');
+      localStorage.setItem('theme', 'light');
+      themeLabel.textContent = '☀️';
+    }
+  });
+});
+
 function generateRandomEndpoint() {
     const ports = [500, 854, 859, 864, 878, 880, 890, 891, 894, 903, 908, 928, 934, 939, 942, 943, 945, 946, 955, 968, 987, 988, 1002, 1010, 1014, 1018, 1070, 1074, 1180, 1387, 1701, 1843, 2371, 2408, 2506, 3138, 3476, 3581, 3854, 4177, 4198, 4233, 4500, 5279, 5956, 7103, 7152, 7156, 7281, 7559, 8319, 8742, 8854, 8886];
     
