@@ -6,6 +6,7 @@ const WireSock = document.getElementById('generateButton5');
 const ClashMASQUE = document.getElementById('generateButton6');
 const container = document.querySelector('.container');
 
+// ==================== ТЁМНАЯ ТЕМА ====================
 document.addEventListener('DOMContentLoaded', () => {
   const themeCheckbox = document.getElementById('themeCheckbox');
   const themeLabel = document.getElementById('themeLabel');
@@ -16,26 +17,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
     document.body.classList.add('dark-theme');
-    themeCheckbox.checked = true;
-    themeLabel.textContent = '🌙';
+    if (themeCheckbox) themeCheckbox.checked = true;
+    if (themeLabel) themeLabel.textContent = '🌙';
   } else {
     document.body.classList.remove('dark-theme');
-    themeCheckbox.checked = false;
-    themeLabel.textContent = '☀️';
+    if (themeCheckbox) themeCheckbox.checked = false;
+    if (themeLabel) themeLabel.textContent = '☀️';
   }
 
   // Обработчик переключения
-  themeCheckbox.addEventListener('change', () => {
-    if (themeCheckbox.checked) {
-      document.body.classList.add('dark-theme');
-      localStorage.setItem('theme', 'dark');
-      themeLabel.textContent = '🌙';
-    } else {
-      document.body.classList.remove('dark-theme');
-      localStorage.setItem('theme', 'light');
-      themeLabel.textContent = '☀️';
-    }
-  });
+  if (themeCheckbox) {
+    themeCheckbox.addEventListener('change', () => {
+      if (themeCheckbox.checked) {
+        document.body.classList.add('dark-theme');
+        localStorage.setItem('theme', 'dark');
+        if (themeLabel) themeLabel.textContent = '🌙';
+      } else {
+        document.body.classList.remove('dark-theme');
+        localStorage.setItem('theme', 'light');
+        if (themeLabel) themeLabel.textContent = '☀️';
+      }
+    });
+  }
 });
 
 function generateRandomEndpoint() {
