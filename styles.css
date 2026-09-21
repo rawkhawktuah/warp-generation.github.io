@@ -1,3 +1,73 @@
+:root {
+  --bg-color: #f4f4f4;
+  --text-color: #333333;
+  --card-bg: #ffffff;
+  --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --modal-bg: #f4f4f4;
+  --option-bg: #ffffff;
+}
+
+body.dark-theme {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --card-bg: #1e1e1e;
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  --modal-bg: #242424;
+  --option-bg: #2d2d2d;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.containerAWG, .containerClash {
+  background-color: var(--card-bg);
+  box-shadow: var(--card-shadow);
+  color: var(--text-color);
+}
+
+.amnezia-text, .wiresock-text, .modal-line {
+  color: var(--text-color);
+}
+
+.modal-content {
+  background-color: var(--modal-bg);
+  color: var(--text-color);
+}
+
+.payment-option, .server-option {
+  background-color: var(--option-bg);
+  color: var(--text-color);
+}
+
+.i2 {
+  background-color: var(--modal-bg);
+  color: var(--text-color);
+}
+
+.theme-toggle-wrapper {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--card-bg);
+  padding: 6px 12px;
+  border-radius: 20px;
+  box-shadow: var(--card-shadow);
+  cursor: pointer;
+}
+
+.theme-toggle-wrapper .toggle-label {
+  font-size: 14px;
+  padding-right: 0;
+  color: var(--text-color);
+}
+
 .whitelist-button {
   box-sizing: border-box;
   position: relative;
