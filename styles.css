@@ -1,3 +1,4 @@
+/* Переменные для темной и светлой тем */
 :root {
   --bg-color: #f4f4f4;
   --text-color: #333333;
@@ -16,6 +17,7 @@ body.dark-theme {
   --option-bg: #2d2d2d;
 }
 
+/* Применение переменных */
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -47,6 +49,7 @@ body {
   color: var(--text-color);
 }
 
+/* Стили для переключателя темы */
 .theme-toggle-wrapper {
   position: fixed;
   top: 15px;
