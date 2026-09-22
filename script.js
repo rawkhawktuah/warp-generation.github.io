@@ -370,7 +370,7 @@ const isDisableCookies = document.getElementById('awg3_1_2')?.checked;
 
 if (isAwg31) {
     if (isRandomTrailers) awg3Config += `\nRandomTrailers = on`;
-    if (isDisableCookies) awg3Config += `\nDisableCookies = off`;
+    if (isDisableCookies) awg3Config += `\nDisableCookies = on`;
 }
 			
             const allowedIPs = getSelectedSites();
@@ -474,7 +474,7 @@ const isDisableCookies = document.getElementById('awg3_1_2c')?.checked;
 
 if (isAwg31) {
     if (isRandomTrailers) awg3cConfig += `\n   random-trailers: true`;
-    if (isDisableCookies) awg3cConfig += `\n   disable-cookies: false`;
+    if (isDisableCookies) awg3cConfig += `\n   disable-cookies: true`;
 }
 
 		if (msqToggle.checked) {
@@ -711,7 +711,7 @@ const isDisableCookies = document.getElementById('awg3_1_2c')?.checked;
 
 if (isAwg31) {
 	if (isRandomTrailers) awg3cConfig += `\n   random-trailers: true`;
-	if (isDisableCookies) awg3cConfig += `\n   disable-cookies: false`;
+	if (isDisableCookies) awg3cConfig += `\n   disable-cookies: true`;
 }
 
 	const serversToggle = document.getElementById('servers');
