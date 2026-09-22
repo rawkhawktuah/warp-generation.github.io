@@ -370,7 +370,7 @@ const isDisableCookies = document.getElementById('awg3_1_2')?.checked;
 
 if (isAwg31) {
     if (isRandomTrailers) awg3Config += `\nRandomTrailers = on`;
-    if (isDisableCookies) awg3Config += `\nDisableCookies = false`;
+    if (isDisableCookies) awg3Config += `\nDisableCookies = off`;
 }
 			
             const allowedIPs = getSelectedSites();
