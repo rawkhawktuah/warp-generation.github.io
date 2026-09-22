@@ -370,7 +370,7 @@ const isDisableCookies = document.getElementById('awg3_1_2')?.checked;
 
 if (isAwg31) {
     if (isRandomTrailers) awg3Config += `\nRandomTrailers = on`;
-    if (isDisableCookies) awg3Config += `\nDisableCookies = on`;
+    if (isDisableCookies) awg3Config += `\nDisableCookies = false`;
 }
 			
             const allowedIPs = getSelectedSites();
@@ -408,7 +408,7 @@ Endpoint = ${randomEndpoint}${persistentKeepalive}`;
             showPopup('Скачивание конфигурации');
         } catch (error) {
             console.error('Error processing configuration:', error);
-            showPopup('Ошибка. Подождите несколько минут или воспользуйтесь <a href="https://generator-config-warp.vercel.app/" target="_blank" style="color: #fff; text-decoration: underline; font-weight: bold;">зеркалом</a>', 'error');
+            showPopup('Ошибка. Подождите несколько минут или воспользуйтесь <a href="https://warp-k82fd91a6c37-q4mz7nrx-ez.vercel.app" target="_blank" style="color: #fff; text-decoration: underline; font-weight: bold;">зеркалом</a>', 'error');
         } finally {
             button.disabled = false;
             button.classList.remove("button--loading");
@@ -474,7 +474,7 @@ const isDisableCookies = document.getElementById('awg3_1_2c')?.checked;
 
 if (isAwg31) {
     if (isRandomTrailers) awg3cConfig += `\n   random-trailers: true`;
-    if (isDisableCookies) awg3cConfig += `\n   disable-cookies: true`;
+    if (isDisableCookies) awg3cConfig += `\n   disable-cookies: false`;
 }
 
 		if (msqToggle.checked) {
@@ -711,7 +711,7 @@ const isDisableCookies = document.getElementById('awg3_1_2c')?.checked;
 
 if (isAwg31) {
 	if (isRandomTrailers) awg3cConfig += `\n   random-trailers: true`;
-	if (isDisableCookies) awg3cConfig += `\n   disable-cookies: true`;
+	if (isDisableCookies) awg3cConfig += `\n   disable-cookies: false`;
 }
 
 	const serversToggle = document.getElementById('servers');
@@ -1201,7 +1201,7 @@ Endpoint = ${randomEndpoint}${persistentKeepalive}`;
 });
 
 document.getElementById('telegramButton').onclick = function() {
-    window.location.href = 'https://t.me/dimiliks_';
+    window.location.href = 'https://t.me/dimoliks_1';
 }
 
 document.getElementById('projectsButton').onclick = function() {
